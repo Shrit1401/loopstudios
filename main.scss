@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+// General css
+// Variables start
+
+$FontAlata :  'Alata', sans-serif;
+
+
+$white : hsl(0, 0%, 100%);
+$black : hsl(0, 0%, 0%);
+$darkGrey : hsl(0, 0%, 55%);
+$VerydarkGrey : hsl(0, 0%, 41%)
+;
+// Variables end
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-size: 15px;
+    font-family: $FontAlata;
+    
+}
+.hidden{
+    display: none;
+}
+// navbar
+
+.navbar{
+    text-align: center;
+    min-height: 10vh;
+    padding: 50px 0px;
+}
+
+.icon{
+    float: left;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.navbar .links{
+    text-align: right;
+    margin-right: 10px;
+}
+
+.navbar .links ul li{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navbar .links ul li a{
+    position: relative;
+    color: $white;
+    margin-right: 50px;
+}
+
+
+.navbar .links ul li a::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    bottom: -4px;
+    background-color: $white;
+    transform: scale(0);
+    transition: transform .5s ease;
+    opacity: 1;
+}
+
+.navbar .links ul li a:hover::before{
+    transform: scale(.5);
+    opacity: 1;
+    background-color: $white;
+}
+
+// home
+
+.home{
+    background-image: url(images/desktop/image-hero.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.home .hometext{
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    color: $white;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: 10%;
+    margin-left: 100px;
+    font-size: 70px;
+    letter-spacing: 5px;
+}
+
+.home .homeBox{
+    position: absolute;
+    padding-top: 300px;
+    padding-left: 650px;
+    margin-left: -30px;
+    margin-top: -50px;
+    border: 2px solid $white;
+    pointer-events: none;
+}
+
+
+// About
+.about .main-content{
+    margin-bottom: 100px;
+}
+
+.about .main-content .img{
+    position: relative;
+    margin-left: 100px;
+    z-index: 1;
+    float: left;
+}
+
+.about .main-content .text-cointainer{
+    position: absolute;
+    top: 950px;
+    z-index: 2;
+    left: 650px;
+    background-color: $white;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-top: 70px;
+}
+
+
+.about .main-content .text-cointainer .h{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    text-transform: uppercase;
+    bottom: -1px;
+}
+
+
+.about .main-content .text-cointainer p{
+    margin-top: 50px;
+    line-height: 25px;
+    font-size: 1em;
+    color: $darkGrey;
+}
+
+// Creations
+
+.create{
+    margin-top: 780px;
+}
+
+.create .h{
+    padding-left: 100px;
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.create .btn-see{
+    padding-right: 200px;
+    float: right;
+    cursor: pointer;
+}
+
+.create .btn-see a{
+    color: $black;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    border: 1px solid $black;
+    padding: 5px 20px;
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.create .btn-see a:hover{
+    color: $white;
+    background-color: $black;
+}
+
+.create .grid{
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    min-height: 500px;
+    max-width: 100%;
+    color: $white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.deep-earth{
+    background-image: url(images/desktop/image-deep-earth.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.night-arcade{
+    background-image: url(images/desktop/image-night-arcade.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.soccer{
+    background-image: url(images/desktop/image-soccer-team.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.the-grid{
+    background-image: url(images/desktop/image-grid.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.above-vr{
+    background-image: url(images/desktop/image-from-above.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.pocket{
+    background-image: url(images/desktop/image-pocket-borealis.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.curiosity{
+    background-image: url(images/desktop/image-curiosity.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.fisheye{
+    background-image: url(images/desktop/image-fisheye.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 256px;
+    height: 450px;
+}
+
+.card{
+    transition: all .5s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover{
+    opacity: 0.5;
+}
+
+.con{
+    bottom: 40px;
+    left: 40px;
+    position: absolute;
+    font-size: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.card:hover .con{
+    color: #000;
+}
+
+//Footer
+
+.foot{
+    background-color: $black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 0.1px;
+}
+
+.icon{
+    float: left;
+}
+
+.foot .social{
+    padding-right: 100px;
+}
+
+.foot .social ul li{
+    position: relative;
+    list-style-type: none;
+    float: right;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.foot .links ul li a::before,
+.foot .social ul li::before{
+    position: absolute;
+    content: '';
+    right: 10px;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    background-color: $white;
+    transform: scale(0);
+    opacity: 1;
+    transition: transform .5s ease;
+}
+
+.foot .links ul li a:hover:before,
+.foot .social ul li:hover:before{
+    transform: scale(0.5);
+}
+
+.foot .links ul li{
+    display: inline-block;
+}
+
+
+.foot .links{
+    padding-left: 70px;
+    margin-top: 15px;
+    margin-bottom: 100px;
+}
+
+.foot .links ul li a{
+    position: relative;
+    color: $white;
+    padding-left: 30px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.foot .links ul li a::before
+{
+    right: 0;
+    left: 10px;
+}
+
+.copyright{
+    padding-top: -100px;
+    text-align: right;
+    color: $darkGrey;
+    padding-right: 100px;
+}
+// hamburger
+.hamburger {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.hamburger .close,
+.hamburger .bar{
+    display: none;
+    padding-right: 100px;
+    bottom: 0;
+    margin-top: 10px
+}
+
+.hamburger.cut .bar{
+    display: none;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hamburger.cut .close{
+    display: block;
+    margin-top: -18px;
+}
+
+// menue
+.menue{
+    display: none;
+}
+
+.menue.open{
+    display: block;
+    z-index: 10000;
+}
+
+.menue .main-content{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+}
+
+.menue .hamburger .close,
+.menue .hamburger .bar{
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.menue .icon{
+    margin-left: 30px;
+    padding-top: 50px;
+}
+
+.menue .con ul li{
+    font-family: 'Josefin Sans', sans-serif;
+    color: $white;
+    list-style-type: none;
+    font-weight: 300;
+    font-size: 1em;
+    padding-bottom: 50px;
+}
+
+.error{
+    display: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 5em;
+    text-align: center;
+}
+// Responsive
+
+@media(max-width: 793px){
+    // nav
+
+    // home
+    .home{
+        width: 100%;
+        background-image: url(images/mobile/image-hero.jpg);
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .navbar .links ul li{
+        display: none;
+    }
+
+    .home .hometext {
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 50px;
+        letter-spacing: 5px;
+        padding-top: 100px;
+                padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .home .homeBox {
+        position: absolute;
+        padding-top: 220px;
+        padding-left: 470px;
+        margin-left: -30px;
+        margin-top: -40px;
+        border: 2px solid white;
+        pointer-events: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .hamburger .bar{
+        display: block;
+    }
+    // ABOUT
+    .about{
+        margin-bottom: 0px;
+    }
+    
+    .about .main-content .img img{
+        width: 120%;
+        height: 100%;
+        margin-left: -80px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .about .main-content .img {
+        position: relative;
+        padding-top: 100px;
+        z-index: 1; 
+        float: left;
+        margin-bottom: 100px;
+    }
+    .about .main-content .text-cointainer {
+        position: inherit;
+        top: 0px;
+        z-index: 2;
+        left: 0px;
+        background-color: transparent;
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .about .main-content .text-cointainer .h {
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        bottom: -1px;
+        font-size: 2.1em;
+        line-height: 1.4;
+        font-weight: 300;
+        font-style: normal;
+        margin-left: -100px;
+        text-align: center;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .about .main-content .text-cointainer p {
+        margin-top: 50px;
+        font-size: 1em;
+        color: #8c8c8c;
+        line-height: 33px;
+        font-weight: 500;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    
+    .create{
+        display: none;
+    }
+
+    .error{
+        display: inherit;
+    }
+
+    .error {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        font-size: 3em;
+        text-align: center;
+        color: red;
+    }
+
+    // Foot
+
+    .icon {
+        float: left;
+        margin-left: 70px;
+    }
+
+    .foot .links ul li {
+        display: block;
+        margin-bottom: 30px;
+        margin-left: 150px;
+    }
+
+    .copyright {
+        text-align: center;
+        color: #8c8c8c;
+    }
+}
+
+
+@media(max-width: 441px){
+    .hamburger .bar{
+        padding-right: 0;
+    }
+    .home .icon{
+        padding-right: 50px;
+    }
+
+    .menue .hamburger .bar{
+        margin-left: 10px;
+        padding-top: 30px;
+    }
+
+    .hamburger .bar{
+        display: block;
+    }
+
+    
+    .menue .con ul li{
+        font-size: 20px;
+    }
+
+    .hometext{
+        margin-right: 90px;
+    }
+
+    .home .hometext {
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 30px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    
+    .home .homeBox {
+        position: absolute;
+        padding-top: 196px;
+        padding-left: 320px;
+        margin-left: -30px;
+        margin-top: -40px;
+        border: 2px solid white;
+        pointer-events: none;
+    }
+}
